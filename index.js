@@ -34,7 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // HOME ROUTE
 app.get('/', (res, req) => {
-  res.sendFile(path.join(__dirname, 'public/HTML', 'home.html'))
+  req.sendFile(path.join(__dirname, 'public/HTML', 'home.html'))
 })
 
 // SIGNUP ROUTE
