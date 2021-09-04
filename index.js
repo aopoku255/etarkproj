@@ -4,12 +4,11 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const mongoose = require('mongoose')
 const User = require('./model/User')
-const { application } = require('express')
 
 const JWT_SECRET = 'hkajjhs%^%5U^%jbhjghjg!#5$$%jhjcxhjfdjdfhhkju54'
 
 const mongodbURI =
-  'mongodb+srv://aopoku6:Prof...0545098438@cluster0.od5n9.mongodb.net/etark?retryWrites=true&w=majority'
+  'mongodb+srv://aopoku6:Prof...0545098438@cluster0.1i6ij.mongodb.net/etark?retryWrites=true&w=majority'
 
 mongoose
   .connect(mongodbURI, {
@@ -35,7 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // HOME ROUTE
 app.get('/', (res, req) => {
-  req.sendFile(path.join(__dirname, 'public/HTML', 'home.html'))
+  res.sendFile(path.join(__dirname, 'public/HTML', 'home.html'))
 })
 
 // SIGNUP ROUTE
